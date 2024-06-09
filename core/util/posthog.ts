@@ -41,7 +41,7 @@ export class Telemetry {
           Telemetry.client = new PostHog(
             "phc_JS6XFROuNbhJtVCEdTSYk6gl5ArRrTNMpCcguAXlSPs",
             {
-              host: "https://app.posthog.com",
+              host: "http://us.i.posthog.com",
             },
           );
         }
