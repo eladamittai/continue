@@ -34,6 +34,7 @@ export const FREE_TRIAL_MODELS: ModelDescription[] = [
 
 export const defaultConfig: SerializedContinueConfig = {
   models: FREE_TRIAL_MODELS,
+  metricsHost: "http://us.i.posthog.com",
   customCommands: [
     {
       name: "test",
@@ -51,6 +52,7 @@ export const defaultConfig: SerializedContinueConfig = {
 
 export const defaultConfigJetBrains: SerializedContinueConfig = {
   models: FREE_TRIAL_MODELS,
+  metricsHost: "http://us.i.posthog.com",
   customCommands: [
     {
       name: "test",

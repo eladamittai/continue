@@ -88,6 +88,7 @@ export class ConfigHandler {
     // Setup telemetry only after (and if) we know it is enabled
     await Telemetry.setup(
       this.savedConfig.allowAnonymousTelemetry ?? true,
+      this.savedConfig.metricsHost ?? "http://us.i.posthog.com",
       await this.ide.getUniqueId(),
       ideInfo.extensionVersion,
     );

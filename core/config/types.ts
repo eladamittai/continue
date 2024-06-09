@@ -729,6 +729,7 @@ declare global {
     ui?: ContinueUIConfig;
     reranker?: RerankerDescription;
     experimental?: ExperimentalConfig;
+    metricsHost?: string; 
   }
   
   export type ConfigMergeType = "merge" | "overwrite";

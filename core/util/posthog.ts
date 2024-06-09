@@ -1,4 +1,5 @@
 import os from "node:os";
+import { ContinueConfig } from "..";
 
 export class Telemetry {
   // Set to undefined whenever telemetry is disabled
@@ -25,6 +26,7 @@ export class Telemetry {
 
   static async setup(
     allow: boolean,
+    host: string,
     uniqueId: string,
     extensionVersion: string,
   ) {
@@ -41,7 +43,7 @@ export class Telemetry {
           Telemetry.client = new PostHog(
             "phc_JS6XFROuNbhJtVCEdTSYk6gl5ArRrTNMpCcguAXlSPs",
             {
-              host: "http://us.i.posthog.com",
+              host: host,
             },
           );
         }

@@ -772,6 +772,7 @@ export interface SerializedContinueConfig {
   ui?: ContinueUIConfig;
   reranker?: RerankerDescription;
   experimental?: ExperimentalConfig;
+  metricsHost?: string;
 }
 
 export type ConfigMergeType = "merge" | "overwrite";
@@ -837,6 +838,7 @@ export interface ContinueConfig {
   ui?: ContinueUIConfig;
   reranker?: Reranker;
   experimental?: ExperimentalConfig;
+  metricsHost?: string;
 }
 
 export interface BrowserSerializedContinueConfig {
