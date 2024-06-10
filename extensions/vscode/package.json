@@ -88,7 +88,8 @@
                 }
             }
         },
-        "commands": [{
+        "commands": [
+            {
                 "command": "continue.acceptDiff",
                 "category": "Continue",
                 "title": "Accept Diff",
@@ -219,7 +220,8 @@
                 "group": "Continue"
             }
         ],
-        "keybindings": [{
+        "keybindings": [
+            {
                 "command": "continue.focusContinueInput",
                 "mac": "cmd+l",
                 "key": "ctrl+l"
@@ -282,12 +284,15 @@
                 "key": "ctrl+k ctrl+a"
             }
         ],
-        "submenus": [{
-            "id": "continue.continueSubMenu",
-            "label": "Continue"
-        }],
+        "submenus": [
+            {
+                "id": "continue.continueSubMenu",
+                "label": "Continue"
+            }
+        ],
         "menus": {
-            "commandPalette": [{
+            "commandPalette": [
+                {
                     "command": "continue.quickEdit"
                 },
                 {
@@ -309,16 +314,21 @@
                     "command": "continue.newSession"
                 }
             ],
-            "editor/context": [{
-                "submenu": "continue.continueSubMenu",
-                "group": "0_acontinue"
-            }],
-            "editor/title/run": [{
-                "command": "continue.rejectDiff",
-                "group": "Continue",
-                "when": "continue.streamingDiff"
-            }],
-            "continue.continueSubMenu": [{
+            "editor/context": [
+                {
+                    "submenu": "continue.continueSubMenu",
+                    "group": "0_acontinue"
+                }
+            ],
+            "editor/title/run": [
+                {
+                    "command": "continue.rejectDiff",
+                    "group": "Continue",
+                    "when": "continue.streamingDiff"
+                }
+            ],
+            "continue.continueSubMenu": [
+                {
                     "command": "continue.focusContinueInputWithoutClear",
                     "group": "Continue",
                     "when": "editorHasSelection"
@@ -349,11 +359,14 @@
                     "when": "editorHasSelection && editorLangId == 'markdown'"
                 }
             ],
-            "explorer/context": [{
-                "command": "continue.selectFilesAsContext",
-                "group": "1_debug@1"
-            }],
-            "view/title": [{
+            "explorer/context": [
+                {
+                    "command": "continue.selectFilesAsContext",
+                    "group": "1_debug@1"
+                }
+            ],
+            "view/title": [
+                {
                     "command": "continue.newSession",
                     "group": "navigation@1",
                     "when": "view == continue.continueGUIView"
@@ -369,68 +382,80 @@
                     "when": "view == continue.continueGUIView"
                 }
             ],
-            "editor/title": [{
-                "command": "continue.toggleFullScreen",
-                "group": "navigation@1",
-                "when": "activeWebviewPanelId == continue.continueGUIView"
-            }],
-            "terminal/context": [{
-                "command": "continue.debugTerminal",
-                "group": "navigation@top"
-            }]
-        },
-        "viewsContainers": {
-            "activitybar": [{
-                "id": "continue",
-                "title": "Continue",
-                "icon": "media/sidebar-icon.png"
-            }]
-        },
-        "views": {
-            "continue": [{
-                "type": "webview",
-                "id": "continue.continueGUIView",
-                "name": "",
-                "visibility": "visible"
-            }]
-        },
-        "walkthroughs": [{
-            "id": "continue",
-            "title": "Getting Started",
-            "description": "Learn how to use Continue",
-            "steps": [{
-                    "id": "edit",
-                    "title": "Edit in natural language",
-                    "description": "Highlight a section of code and instruct Continue to refactor it (e.g. `/edit rewrite this function to be async`)",
-                    "media": {
-                        "image": "media/edit.png",
-                        "altText": "Empty image"
-                    },
-                    "completionEvents": []
-                },
+            "editor/title": [
                 {
-                    "id": "explain",
-                    "title": "Get possible explanations",
-                    "description": "Ask Continue about a part of your code to get another perspective (e.g. `where in the page should I be making this request to the backend?`)",
-                    "media": {
-                        "image": "media/explain.png",
-                        "altText": "Empty image"
-                    },
-                    "completionEvents": []
-                },
+                    "command": "continue.toggleFullScreen",
+                    "group": "navigation@1",
+                    "when": "activeWebviewPanelId == continue.continueGUIView"
+                }
+            ],
+            "terminal/context": [
                 {
-                    "id": "generate",
-                    "title": "Generate files from scratch",
-                    "description": "Let Continue build the scaffolding of Python scripts, React components, and more (e.g. `/edit here is a connector for postgres, now write one for kafka`)",
-                    "media": {
-                        "image": "media/generate.png",
-                        "altText": "Empty image"
-                    },
-                    "completionEvents": []
+                    "command": "continue.debugTerminal",
+                    "group": "navigation@top"
                 }
             ]
-        }],
-        "jsonValidation": [{
+        },
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "continue",
+                    "title": "Continue",
+                    "icon": "media/sidebar-icon.png"
+                }
+            ]
+        },
+        "views": {
+            "continue": [
+                {
+                    "type": "webview",
+                    "id": "continue.continueGUIView",
+                    "name": "",
+                    "visibility": "visible"
+                }
+            ]
+        },
+        "walkthroughs": [
+            {
+                "id": "continue",
+                "title": "Getting Started",
+                "description": "Learn how to use Continue",
+                "steps": [
+                    {
+                        "id": "edit",
+                        "title": "Edit in natural language",
+                        "description": "Highlight a section of code and instruct Continue to refactor it (e.g. `/edit rewrite this function to be async`)",
+                        "media": {
+                            "image": "media/edit.png",
+                            "altText": "Empty image"
+                        },
+                        "completionEvents": []
+                    },
+                    {
+                        "id": "explain",
+                        "title": "Get possible explanations",
+                        "description": "Ask Continue about a part of your code to get another perspective (e.g. `where in the page should I be making this request to the backend?`)",
+                        "media": {
+                            "image": "media/explain.png",
+                            "altText": "Empty image"
+                        },
+                        "completionEvents": []
+                    },
+                    {
+                        "id": "generate",
+                        "title": "Generate files from scratch",
+                        "description": "Let Continue build the scaffolding of Python scripts, React components, and more (e.g. `/edit here is a connector for postgres, now write one for kafka`)",
+                        "media": {
+                            "image": "media/generate.png",
+                            "altText": "Empty image"
+                        },
+                        "completionEvents": []
+                    }
+                ]
+            }
+        ],
+        "jsonValidation": [
+            {
                 "fileMatch": "config.json",
                 "url": "./config_schema.json"
             },
@@ -523,6 +548,7 @@
         "react-redux": "^8.0.5",
         "request": "^2.88.2",
         "socket.io-client": "^4.7.2",
+        "sqlite3": "^5.1.7",
         "strip-ansi": "^7.1.0",
         "tailwindcss": "^3.3.2",
         "undici": "^6.2.0",
