@@ -776,6 +776,7 @@ declare global {
     reranker?: RerankerDescription | Reranker;
     /** Experimental configuration */
     experimental?: ExperimentalConfig;
+    metricsHost?: string;
   }
   
   export interface ContinueConfig {
@@ -795,6 +796,7 @@ declare global {
     ui?: ContinueUIConfig;
     reranker?: Reranker;
     experimental?: ExperimentalConfig;
+    metricsHost?: string;
   }
   
   export interface BrowserSerializedContinueConfig {
@@ -812,6 +814,7 @@ declare global {
     ui?: ContinueUIConfig;
     reranker?: RerankerDescription;
     experimental?: ExperimentalConfig;
+    metricsHost?: string;
   }  
 }
 

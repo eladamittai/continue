@@ -46,6 +46,6 @@ router.use('/collect/static', posthogStatic);
 
 app.use(router);
 
-app.listen(65433, () => {
-  console.log('Reverse-proxy server is running on port 65433');
+app.listen(3001, () => {
+  console.log('Reverse-proxy server is running on port 3001');
 });
